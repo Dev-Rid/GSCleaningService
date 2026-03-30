@@ -27,11 +27,6 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-       
-      {/* <head>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      </head> */}
-
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
