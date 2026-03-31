@@ -1,10 +1,9 @@
 "use client";
-
 import Link from "next/link";
 
 export default function Hero() {
   return (
-     <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-sky-50 via-white to-cyan-50">
+     <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-sky-50 via-white to-cyan-50 mb-30">
 
       {/* Background Glow Effects */}
       <div className="absolute top-24 left-10 w-72 h-72 bg-sky-300/30 rounded-full blur-3xl"></div>
@@ -17,13 +16,14 @@ export default function Hero() {
         <div className="space-y-6 text-center md:text-left">
 
           {/* Badge */}
-          <span className="inline-block text-sm font-medium text-sky-700 bg-sky-100 px-4 py-1 rounded-full">
+          <span className="inline-block text-sm font-medium text-sky-700 bg-sky-100 px-4 py-1 rounded-full mt-2">
             Trusted Cleaning Professionals
           </span>
 
           {/* Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-            Professional, Eco-Friendly Cleaning Services
+            Professional, Eco-Friendly Cleaning Services    
+            <span className="text-2xl font-light lg:text-6xl"> in the North East</span>
           </h1>
 
           {/* Subtext */}
@@ -32,23 +32,22 @@ export default function Hero() {
           </p>
 
           {/* Extra Note */}
-          <p className="text-gray-500 text-base max-w-md mx-auto md:mx-0">
+          <p className="text-gray-500 text-base max-w-md mx-auto md:mx-0 mt-10">
             Book your cleaning today and enjoy a fresher, healthier home.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-
             <Link
               href="/booking"
-              className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] transition duration-300"
+              className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white px-12 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] transition duration-300 text-xl"
             >
               Book Now
             </Link>
 
             <Link
               href="/services"
-              className="border border-sky-600 text-sky-600 px-8 py-3 rounded-xl font-semibold hover:bg-sky-50 transition duration-300"
+              className="border border-sky-600 text-sky-600 px-12 py-4 rounded-xl font-semibold hover:bg-sky-50 transition duration-300 text-xl"
             >
               Our Services
             </Link>
