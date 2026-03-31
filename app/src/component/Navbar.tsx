@@ -16,16 +16,16 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full h-26 sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
+    <nav className="w-full h-22 sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
         
         {/* Logo */}
-        <h1 className="text-xl font-bold bg-gradient-to-r from-sky-600 to-cyan-500 bg-clip-text text-transparent">
-          CleanPro
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-cyan-500 bg-clip-text text-transparent">
+          GSCleanPro
         </h1>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 font-medium">
+        <div className="hidden md:flex items-center gap-8 font-medium text-xl">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <Link
             href="/booking"
             onClick={() => setMenuOpen(false)}
-            className="block text-center bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold"
+            className="block text-center bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold text-xl"
           >
             Book Now
           </Link>
