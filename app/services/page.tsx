@@ -247,10 +247,11 @@ export default function ServicesPage() {
                       Prices may vary depending on property condition and size.
                     </p>
                     <a
-                      href="/contact"
+                      href="/pricing"
                       className="mt-5 block w-full text-center bg-white text-emerald-700 font-semibold py-3 rounded-xl hover:bg-emerald-50 transition-all duration-300 hover:-translate-y-0.5"
                     >
-                      Get a Free Quote
+                      {/* Get a Free Quote */}
+                      Explore Our Pricing
                     </a>
                   </div>
                 </div>
