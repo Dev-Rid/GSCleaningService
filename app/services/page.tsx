@@ -273,32 +273,47 @@ export default function ServicesPage() {
           </section>
  
           {/* Why Choose Us */}
+    
           <section className={`pb-20 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-2xl"></div>
-              </div>
-              <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
-                  Why Choose Green Sahara?
-                </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                  {whyUs.map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all duration-300 border border-white/20"
-                    >
-                      <span className="text-2xl flex-shrink-0">{item.icon}</span>
-                      <div>
-                        <p className="text-white font-bold text-sm mb-1">{item.title}</p>
-                        <p className="text-emerald-200 text-xs leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <div className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-2xl"></div>
             </div>
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+                Why Choose Green Sahara?
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {whyUs.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all duration-300 border border-white/20"
+                  >
+                    <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <p className="text-white font-bold text-sm mb-1">{item.title}</p>
+                      <p className="text-emerald-200 text-xs leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            {/* Button */}
+            <div className="flex justify-center mt-10">
+              <a
+                href="/whychooseus"
+                className="inline-flex items-center gap-2 bg-white text-emerald-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-emerald-50 hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                Discover Why We're Different
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            </div>
+          </div>
           </section>
  
           {/* CTA */}
