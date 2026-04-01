@@ -70,7 +70,7 @@ export default function About() {
 
           {/* Hero / Who We Are */}
           <section className={`py-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-200">
+            <div className="inline-flex -mt-20 items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-200">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
               UK-Registered • North East England
             </div>
@@ -242,9 +242,10 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="group relative px-8 py-4 bg-emerald-600 text-white rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-200 hover:-translate-y-1"
+                  className="group relative px-16 py-4 bg-emerald-600 text-white rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-200 hover:-translate-y-1"
                 >
-                  Get a Free Quote
+                  {/* Get a Free Quote */}
+                  Get In Touch
                 </a>
                 <a
                   href="/services"
