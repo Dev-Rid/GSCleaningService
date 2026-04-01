@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function HomePage() {
+export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

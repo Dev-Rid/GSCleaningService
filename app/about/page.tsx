@@ -1,348 +1,285 @@
-export default function AboutPage() {
+'use client';
+
+import { useState, useEffect } from 'react';
+
+export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const values = [
+    {
+      icon: '🤝',
+      title: 'Integrity',
+      description: 'Honest pricing, transparent communication.',
+    },
+    {
+      icon: '⭐',
+      title: 'Quality',
+      description: 'Consistent, high-standard cleaning every time.',
+    },
+    {
+      icon: '🌿',
+      title: 'Eco-Responsibility',
+      description: 'Safe, sustainable cleaning products.',
+    },
+    {
+      icon: '💼',
+      title: 'Professionalism',
+      description: 'Trained, insured, and DBS-checked staff.',
+    },
+    {
+      icon: '❤️',
+      title: 'Customer Care',
+      description: 'Your satisfaction is our priority.',
+    },
+  ];
+
+  const compliance = [
+    { icon: '🛡️', label: 'Public Liability Insurance' },
+    { icon: '👷', label: 'Employers\' Liability Insurance' },
+    { icon: '✅', label: 'DBS Checks for All Staff' },
+    { icon: '⚗️', label: 'COSHH Compliance' },
+    { icon: '🏥', label: 'Health & Safety Policies' },
+    { icon: '🔒', label: 'GDPR Compliance' },
+    { icon: '♻️', label: 'Waste Disposal Regulations' },
+  ];
+
   return (
-    // <main className="bg-gradient-to-br from-sky-50 via-white to-cyan-50">
-    //   {/* HERO */}
-    //   <section className="py-24 text-center px-6">
-    //     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-    //       About Us
-    //     </h1>
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-green-50">
 
-    //     <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-    //       GS Cleaning Services aims to position itself as a reliable, eco-conscious,
-    //       and quality-focused cleaning provider in the North East of England.
-    //     </p>
-    //   </section>
-
-
-    //   {/* WHO WE ARE */}
-    //   <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-16">
-
-    //     <div className="space-y-6">
-    //       <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-    //         Who We Are
-    //       </h2>
-
-    //       <p className="text-gray-600 text-lg">
-    //         Green Sahara Limited is a UK-registered cleaning services company providing
-    //         professional, eco-friendly cleaning solutions across the North East of England.
-    //       </p>
-
-    //       <p className="text-gray-600 text-lg">
-    //         We specialize in residential cleaning, end-of-tenancy cleaning, and carpet cleaning,
-    //         serving homeowners, tenants, landlords, and letting agents.
-    //       </p>
-    //     </div>
-
-    //     {/* OPTIONAL IMAGE */}
-    //     {/*
-    //     <div className="flex justify-center">
-    //       <img
-    //         src="/about-cleaning.png"
-    //         alt="About us"
-    //         className="rounded-2xl shadow-xl w-full max-w-md"
-    //       />
-    //     </div>
-    //     */}
-    //   </section>
-      
-    //    {/* TEAM */}
-    //   <section className="py-20 px-6 bg-white">
-    //     <div className="max-w-7xl mx-auto text-center">
-
-    //       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-    //         Our Team
-    //       </h2>
-
-    //       <div className=" ">
-    //           <p className="text-gray-600 text-lg">
-    //             Green Sahara Limited is led by a Managing Director responsible for strategy, compliance, and finance. Operations are managed by an experienced team overseeing scheduling, quality control, and staff supervision.
-    //           </p>
-
-    //       </div>
-    //     </div>
-    //   </section>
-
-    //   {/* CORE SECTIONS */}
-    //   <section className="py-20 px-6">
-    //     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-
-    //       {/* Vision */}
-    //       <div className="p-8 bg-white rounded-2xl shadow-sm">
-    //         <h3 className="text-2xl font-semibold text-sky-600 mb-3">Our Vision</h3>
-  
-    //           <p className="text-gray-600 text-lg">
-    
-    //             To become a trusted and recognizable cleaning brand in North East England known for <span className="font-bold"> reliability, profesionalism, and environmentally responsible service</span>
-    //           </p>
-    //       </div>
-
-    //       {/* Mission */}
-    //       <div className="p-8 bg-white rounded-2xl shadow-sm">
-    //         <h3 className="text-2xl font-semibold text-sky-600 mb-3">Our Mission</h3>
-    //           <p className="text-gray-600 text-lg">
-
-    //             To provide<span className="font-bold"> high-quality, affordable, and dispensable c;leaning services</span> using trained staff, modern-equipment, and eco-friendly products 
-    //           </p>
-    //       </div>
-
-    //       {/* Values */}
-    //       <div className="p-8 bg-white rounded-2xl shadow-sm">
-    //         <h3 className="text-2xl font-semibold text-sky-600 mb-3">Our Values</h3>
-    //           <p className="text-gray-600 text-lg">
-    //             {/* Add your values here */}
-    //             <p> • <span>Integrity</span> — Honest pricing, transparent communication</p>
-    //             <p> • <span>Quality</span> — Consistent, high-standard cleaning every time</p>
-    //             <p> • <span>Eco-responsibility</span> — Safe, sustainable cleaning products</p>
-    //             <p> • <span>Professionalism</span> — Trained, insured, and DBS-checked staff</p>
-    //             <p> • <span>Customer Care</span> — Your satisfaction is our priority</p>
-                
-    //           </p>
-    //       </div>
-
-    //       {/* Compliance */}
-    //       <div className="p-8 bg-white rounded-2xl shadow-sm">
-    //         <h3 className="text-2xl font-semibold text-sky-600 mb-3">
-    //           Compliance & Assurance
-    //         </h3>
-    //         <p className="text-gray-600 text-lg">
-    //             We operate with full adherence to UK regulations, including:
-    //           {/* Add compliance details here */}
-    //             <p> • <span>Public Liability Insurance</span></p>
-    //             <p> • <span>Employers' Liability Insurance</span></p>
-    //             <p> • <span>DBS checks for all staff</span></p>
-    //             <p> • <span>COSHH compliance</span></p>
-    //             <p> • <span>Health and safety policies</span></p>
-    //             <p> • <span>GDPR compliance</span></p>
-    //             <p> • <span>Waste disposal regulations</span></p>
-                
-    //         </p>
-    //       </div>
-
-    //     </div>
-    //   </section>
-
-    // </main>
-
-    <main className="bg-gradient-to-br from-sky-50 via-white to-cyan-50">
-  {/* HERO SECTION */}
-  <section className="relative py-24 md:py-32 text-center px-6 overflow-hidden">
-    {/* Decorative background element */}
-    <div className="absolute inset-0 bg-grid-sky-100/[0.2] bg-[size:20px_20px] pointer-events-none" />
-    
-    <div className="relative z-10 max-w-4xl mx-auto ">
-      <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm font-medium text-blue-700 bg-blue-50 rounded-full">
-        ✨ Our Story
-      </div>
-      
-      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 to-gray-900 bg-clip-text text-transparent mb-6">
-        About Us
-      </h1>
-      
-      <p className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
-        GS Cleaning Services aims to position itself as a reliable, eco-conscious,
-        and quality-focused cleaning provider in the North East of England.
-      </p>
-    </div>
-  </section>
-
-  {/* WHO WE ARE SECTION */}
-  <section className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-    <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div className="space-y-6 order-2 md:order-1">
-        <div className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full">
-          About Green Sahara
-        </div>
-        
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          Who We Are
-        </h2>
-        
-        <div className="space-y-4 text-gray-600 text-lg">
-          <p>
-            Green Sahara Limited is a UK-registered cleaning services company providing
-            professional, eco-friendly cleaning solutions across the North East of England.
-          </p>
-          
-          <p>
-            We specialize in <span className="font-semibold text-gray-800">residential cleaning</span>, 
-            <span className="font-semibold text-gray-800"> end-of-tenancy cleaning</span>, and 
-            <span className="font-semibold text-gray-800"> carpet cleaning</span>, serving homeowners, 
-            tenants, landlords, and letting agents with excellence and care.
-          </p>
-        </div>
-        
-        {/* Trust indicators */}
-        <div className="flex flex-wrap gap-4 pt-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>Fully Insured</span>
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>Eco-Friendly Products</span>
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>DBS Checked Staff</span>
-          </div>
-        </div>
-      </div>
-      
-      {/* Decorative image placeholder - uncomment and add your image */}
-      <div className="order-1 md:order-2 flex justify-center">
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-3xl blur-2xl opacity-20" />
-          <div className="relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 shadow-xl border border-white/50">
-            <div className="w-full max-w-md h-80 flex items-center justify-center">
-              <svg className="w-32 h-32 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-   {/* TEAM SECTION */}
-  <section className="py-20 px-6 bg-white">
-    <div className="max-w-4xl mx-auto text-center">
-      <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-6">
-        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      {/* Decorative Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-green-300/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <svg className="absolute top-32 right-20 w-32 h-32 text-emerald-200/30 animate-float" viewBox="0 0 100 100" fill="currentColor" style={{ animationDelay: '0.5s' }}>
+          <path d="M50 10 Q70 30 70 50 Q70 70 50 90 Q40 70 40 50 Q40 30 50 10 Z" />
+        </svg>
+        <svg className="absolute bottom-40 right-1/4 w-24 h-24 text-green-300/25 animate-float" viewBox="0 0 100 100" fill="currentColor" style={{ animationDelay: '1.5s' }}>
+          <path d="M50 10 Q70 30 70 50 Q70 70 50 90 Q40 70 40 50 Q40 30 50 10 Z" />
+        </svg>
+        <svg className="absolute top-1/3 left-20 w-20 h-20 text-emerald-300/20 animate-float" viewBox="0 0 100 100" fill="currentColor" style={{ animationDelay: '2s' }}>
+          <path d="M50 10 Q70 30 70 50 Q70 70 50 90 Q40 70 40 50 Q40 30 50 10 Z" />
         </svg>
       </div>
-      
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Our Team
-      </h2>
-      
-      <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">
-        Green Sahara Limited is led by a Managing Director responsible for strategy, compliance, and finance. 
-        Operations are managed by an experienced team overseeing scheduling, quality control, and staff supervision.
-      </p>
-      
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full">
-          <div className="w-2 h-2 bg-blue-500 rounded-full" />
-          <span className="text-sm text-gray-600">10+ Years Combined Experience</span>
-        </div>
-        <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full">
-          <div className="w-2 h-2 bg-blue-500 rounded-full" />
-          <span className="text-sm text-gray-600">Fully Trained Staff</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  {/* CORE SECTIONS */}
-  <section className="py-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Our Foundation
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Built on strong principles and unwavering commitment to excellence
-        </p>
-      </div>
-      
-      <div className="grid md:grid-cols-2 gap-8">
-        {/* Vision */}
-        <div className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">Our Vision</h3>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            To become a trusted and recognizable cleaning brand in North East England, known for 
-            <span className="font-semibold text-gray-800"> reliability, professionalism, and environmentally responsible service</span>.
-          </p>
-        </div>
+      <div className="relative pt-24">
+        <div className="max-w-7xl mx-auto px-6 pb-20">
 
-        {/* Mission */}
-        <div className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">Our Mission</h3>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            To provide <span className="font-semibold text-gray-800">high-quality, affordable, and dependable cleaning services</span> 
-            using trained staff, modern equipment, and eco-friendly products.
-          </p>
-        </div>
+          {/* Hero / Who We Are */}
+          <section className={`py-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-200">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+              UK-Registered • North East England
+            </div>
 
-        {/* Values */}
-        <div className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
-          <div className="space-y-3">
-            {[
-              { name: "Integrity", desc: "Honest pricing, transparent communication" },
-              { name: "Quality", desc: "Consistent, high-standard cleaning every time" },
-              { name: "Eco-responsibility", desc: "Safe, sustainable cleaning products" },
-              { name: "Professionalism", desc: "Trained, insured, and DBS-checked staff" },
-              { name: "Customer Care", desc: "Your satisfaction is our priority" }
-            ].map((value, idx) => (
-              <div key={idx} className="flex gap-3">
-                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2.5 flex-shrink-0" />
-                <div>
-                  <span className="font-semibold text-gray-800">{value.name}</span>
-                  <span className="text-gray-600"> — {value.desc}</span>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                  <span className="text-slate-800">Who</span>{' '}
+                  <span className="bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-800 bg-clip-text text-transparent">
+                    We Are
+                  </span>
+                </h1>
+                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                  <span className="font-semibold text-emerald-700">Green Sahara Limited</span> (owner of GS Cleaning Services) is a UK-registered cleaning services company providing professional, eco-friendly cleaning solutions across the <span className="font-semibold text-slate-700">North East of England</span>.
+                </p>
+                <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                  We specialise in residential cleaning, end-of-tenancy cleaning, and carpet cleaning, serving homeowners, tenants, landlords, and letting agents.
+                </p>
+                <blockquote className="border-l-4 border-emerald-500 pl-6 py-2 bg-emerald-50/60 rounded-r-xl">
+                  <p className="text-emerald-800 italic font-medium leading-relaxed">
+                    "GS Cleaning Services aims to position itself as a reliable, eco-conscious, and quality-focused cleaning provider in the North East of England."
+                  </p>
+                </blockquote>
+              </div>
+
+              {/* Visual Card */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-36 h-36 bg-white rounded-full blur-2xl"></div>
+                  </div>
+                  <div className="relative z-10">
+                    <div className="text-6xl mb-4">🌿</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Green Sahara Limited</h3>
+                    <p className="text-emerald-200 mb-6">Professional Cleaning Services</p>
+                    <div className="space-y-3">
+                      {['Residential Cleaning', 'End of Tenancy Cleaning', 'Carpet Cleaning'].map((s, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3 border border-white/20">
+                          <div className="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center flex-shrink-0">
+                            <svg className="w-3 h-3 text-emerald-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span className="text-white font-medium text-sm">{s}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                {/* Floating badge */}
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-5 py-3 border border-emerald-100">
+                  <p className="text-xs text-slate-500 font-medium">Serving</p>
+                  <p className="text-slate-800 font-bold text-sm">North East England</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </section>
 
-        {/* Compliance */}
-        <div className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Compliance & Assurance</h3>
-          <p className="text-gray-600 mb-3">We operate with full adherence to UK regulations, including:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {[
-              "Public Liability Insurance",
-              "Employers' Liability Insurance",
-              "DBS checks for all staff",
-              "COSHH compliance",
-              "Health and safety policies",
-              "GDPR compliance",
-              "Waste disposal regulations"
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-gray-600 text-sm">
-                <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>{item}</span>
+          {/* Vision & Mission */}
+          <section className={`py-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Vision */}
+              <div className="group bg-white rounded-2xl p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 hover:-translate-y-2">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🔭</div>
+                <h2 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-emerald-700 transition-colors">Our Vision</h2>
+                <p className="text-slate-600 leading-relaxed">
+                  To become a <span className="font-semibold text-emerald-700">trusted and recognisable</span> residential cleaning brand in North East England known for reliability, professionalism, and environmentally responsible services.
+                </p>
               </div>
-            ))}
-          </div>
+
+              {/* Mission */}
+              <div className="group bg-white rounded-2xl p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 hover:-translate-y-2">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+                <h2 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-emerald-700 transition-colors">Our Mission</h2>
+                <p className="text-slate-600 leading-relaxed">
+                  To provide <span className="font-semibold text-emerald-700">high-quality, affordable, and dependable</span> cleaning services using trained staff, modern equipment, and eco-friendly products.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Our Values */}
+          <section className={`py-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-10">
+              Our <span className="text-emerald-600">Values</span>
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+              {values.map((value, index) => (
+                <div
+                  key={index}
+                  className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 hover:-translate-y-2 text-center"
+                >
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-emerald-700 transition-colors">{value.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Our Team */}
+          <section className={`py-16 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-2xl"></div>
+              </div>
+              <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Team</h2>
+                  <p className="text-emerald-100 leading-relaxed text-lg mb-6">
+                    Green Sahara Limited is led by a dedicated <span className="font-semibold text-white">Managing Director</span> responsible for strategy, compliance, and finance.
+                  </p>
+                  <p className="text-emerald-100 leading-relaxed text-lg">
+                    Operations are managed by an experienced team overseeing <span className="font-semibold text-white">scheduling, quality control, and staff supervision</span>.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { role: 'Managing Director', icon: '👔', desc: 'Strategy, compliance & finance' },
+                    { role: 'Operations Manager', icon: '📋', desc: 'Scheduling & quality control' },
+                    { role: 'Cleaning Staff', icon: '🧹', desc: 'Trained & DBS-checked' },
+                    { role: 'Customer Support', icon: '📞', desc: 'Here to help you' },
+                  ].map((member, i) => (
+                    <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                      <div className="text-3xl mb-2">{member.icon}</div>
+                      <p className="text-white font-bold text-sm mb-1">{member.role}</p>
+                      <p className="text-emerald-200 text-xs leading-relaxed">{member.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Compliance & Assurance */}
+          <section className={`py-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-white rounded-2xl p-10 md:p-14 shadow-lg border border-emerald-100">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Compliance & <span className="text-emerald-600">Assurance</span>
+              </h2>
+              <p className="text-slate-600 text-lg mb-10">
+                We operate with full adherence to UK regulations so you can trust us completely.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {compliance.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 bg-emerald-50 rounded-xl px-5 py-4 border border-emerald-100 hover:border-emerald-300 hover:bg-emerald-100/60 transition-all duration-300 group"
+                  >
+                    <div className="text-2xl group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                    <span className="text-slate-700 font-medium text-sm leading-snug">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className={`py-10 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-gradient-to-br from-slate-50 to-emerald-50 rounded-2xl p-10 shadow-sm border border-emerald-100 text-center">
+              <h2 className="text-3xl font-bold text-slate-800 mb-4">
+                Ready for a <span className="text-emerald-600">Cleaner Home?</span>
+              </h2>
+              <p className="text-slate-600 text-lg mb-8 max-w-xl mx-auto">
+                Get in touch today for a free quote and discover why customers across the North East trust Green Sahara.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="group relative px-8 py-4 bg-emerald-600 text-white rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-200 hover:-translate-y-1"
+                >
+                  Get a Free Quote
+                </a>
+                <a
+                  href="/services"
+                  className="px-8 py-4 bg-white text-emerald-700 rounded-xl font-semibold text-lg border-2 border-emerald-600 hover:bg-emerald-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  View Our Services
+                </a>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
-    </div>
-  </section>
 
- 
-    </main>
+
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+        * {
+          font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        h1, h2, h3 {
+          font-family: 'Outfit', sans-serif;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+      `}</style>
+    </div>
   );
 }
