@@ -112,7 +112,7 @@ export default function Hero() {
                   className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 hover:-translate-y-2"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-5xl mb-4 group-hover:scale110 transitiontransform duration300">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-emerald-700 transition-colors">
@@ -180,7 +180,7 @@ export default function Hero() {
             </h2>
 
             <div className="bg-gradient-to-br from-slate-50 to-emerald-50 rounded-2xl p-10 shadow-sm border border-emerald-100 text-center">
-              <div className="text-6xl mb-4">⭐</div>
+              <div className="text-7xl mb-4">⭐</div>
               <p className="text-lg text-slate-600 italic mb-4">
                 "Testimonials coming soon!"
               </p>
