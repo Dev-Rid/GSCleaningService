@@ -12,11 +12,11 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Services', href: '#services' },
-    { name: 'Service Areas', href: '#areas' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'About Us', href: 'about' },
+    { name: 'Our Services', href: 'services' },
+    // { name: 'Service Areas', href: '#areas' },
+    // { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Contact Us', href: 'contact' },
   ];
 
   const serviceAreas = [
@@ -43,9 +43,17 @@ export default function Footer() {
             {/* Company Info */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-2xl">🌿</span>
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg shadowemerald-200">
+                    <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">
+                      <path d="M12 2C10.5 2 9 2.5 8 3.5C7 4.5 6.5 6 6.5 7.5C6.5 9.5 7.5 11 9 12C7.5 13 6.5 14.5 6.5 16.5C6.5 18 7 19.5 8 20.5C9 21.5 10.5 22 12 22C13.5 22 15 21.5 16 20.5C17 19.5 17.5 18 17.5 16.5C17.5 14.5 16.5 13 15 12C16.5 11 17.5 9.5 17.5 7.5C17.5 6 17 4.5 16 3.5C15 2.5 13.5 2 12 2Z" />
+                    </svg>
                 </div>
+              <div className="absolute inset-0 bg-emerald-400 rounded-xl blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+            </div>
+                {/* <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-2xl">🌿</span>
+                </div> */}
                 <div>
                   <h2 className="text-2xl font-bold">Green Sahara</h2>
                   <p className="text-sm text-emerald-300">Limited</p>
@@ -113,7 +121,7 @@ export default function Footer() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <span>+44 123 456 7890</span>
+                  <span>*********</span>
                 </a>
                 <a href="mailto:info@greensahara.co.uk" className="flex items-center gap-3 text-slate-300 hover:text-emerald-400 transition-colors group">
                   <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-emerald-600 transition-all">
@@ -121,7 +129,7 @@ export default function Footer() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <span className="text-sm">info@greensahara.co.uk</span>
+                  <span className="text-sm">***********</span>
                 </a>
               </div>
 
