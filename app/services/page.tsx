@@ -130,7 +130,7 @@ export default function ServicesPage() {
  
           {/* Hero */}
           <section className={`py-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-200">
+            <div className="inline-flex -mt-20 items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-200">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
               Professional • Eco-Friendly • North East England
             </div>
