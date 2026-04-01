@@ -60,7 +60,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative text-slate-700 hover:text-emerald-600 font-medium transition group"
+                className="relative text-lg text-slate-700 hover:text-emerald-600 font-medium transition group"
               >
                 {link.name}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-green-600 group-hover:w-full transition-all"></span>
@@ -72,9 +72,10 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="#contact"
-              className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-xl font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"
+              className="px-6 py-3 text-lg bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-xl font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"
             >
-              Get a Quote
+              {/* Get a Quote */}
+              Get Started
             </Link>
           </div>
 
