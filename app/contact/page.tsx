@@ -2,6 +2,15 @@
 
 import { useState, useEffect } from 'react';
 
+type FormDataType = {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  date: string;
+  message: string;
+};
+
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -18,12 +27,27 @@ export default function ContactPage() {
     setIsVisible(true);
   }, []);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+     const { name, value } = e.target as {
+      name: keyof FormDataType;
+      value: string;
+    };
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    // setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // TODO: send to API here
+    console.log(formData);
+
     // Handle form submission here (e.g. send to API)
     setSubmitted(true);
   };
