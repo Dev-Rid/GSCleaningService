@@ -74,8 +74,8 @@ export default function Navbar() {
               href="#contact"
               className="px-6 py-3 text-lg bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-xl font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"
             >
-              {/* Get a Quote */}
-              Get Started
+              Get a Quote
+              {/* Get Started */}
             </Link>
           </div>
 
